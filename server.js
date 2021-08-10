@@ -58,7 +58,7 @@ app.get('/api/:date?', function(req, res){
     });
   }else if(queryInput.includes(' ')){//check if it has space
     res.json({
-      unix: dateUnixFormatted, //this was the biggest problem, i had to return it as an integer but using string litteral the return
+      unix: dateUnixFormatted, //this was the biggest problem, i had to return it as an integer but using string litteral the return is always a string. ill never forget this problem EVER AGAIN. lol
       utc: `${dateStringFormatted}`
     });
   }else if(!isNaN(queryInput)){//check if is a number
